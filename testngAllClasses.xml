@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="listeners.Listener"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="E:/projects/testng-course">
+
+        <groups>
+            <run>
+                <include name="functional"></include>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="testcases.TestCase1">
+                <methods>
+                    <include name="doLogin"/>
+                    <include name="doUserRegistration"/>
+                </methods>
+            </class>
+            <class name="testcases.TestCase2">
+                <methods>
+                    <include name="validateTitles"/>
+                </methods>
+            </class>
+            <class name="testcases.TestCase3">
+                <methods>
+                    <include name="doUserRegistration"/>
+                    <include name="doLogin"/>
+                    <include name="thirdTest"/>
+                    <include name="fourthTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
