@@ -2,8 +2,9 @@ package testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utility.BaseTest;
 
-public class TestCase3 {
+public class TestCase3 extends BaseTest {
 
     @Test(priority = 1, groups = "functional")
     public void doUserRegistration() {
@@ -11,18 +12,18 @@ public class TestCase3 {
         Assert.fail("User not registered successfully");
     }
 
-    @Test(priority = 2, dependsOnMethods = "doUserRegistration",alwaysRun = true, groups = "functional")
+    @Test(priority = 2, dependsOnMethods = "doUserRegistration", alwaysRun = true, groups = "functional")
     public void doLogin() {
         System.out.println("Executing login test");
     }
 
     @Test(priority = 3)
-    public  void thirdTest(){
+    public void thirdTest() {
         System.out.println("Executing third test");
     }
 
     @Test(priority = 4)
-    public  void fourthTest(){
+    public void fourthTest() {
         System.out.println("Executing fourth test");
     }
 }

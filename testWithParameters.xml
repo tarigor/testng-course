@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parameterized test">
+
+    <test name="TestParameterizationXML Test">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="env" value="qa"/>
+        <classes>
+            <class name="parameterization.TestParameterizationXML"/>
+        </classes>
+    </test>
+
+    <test name="TestParameterizationXML Test2">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="env" value="prod"/>
+        <classes>
+            <class name="parameterization.TestParameterizationXML"/>
+        </classes>
+    </test>
+
+</suite>

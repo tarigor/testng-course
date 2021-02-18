@@ -1,10 +1,10 @@
 package testcases;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import utility.BaseTest;
 
-public class TestCase2 {
+public class TestCase2 extends BaseTest {
 
     @Test
     public void validateTitles() {

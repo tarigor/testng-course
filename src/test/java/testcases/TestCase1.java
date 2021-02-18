@@ -2,27 +2,27 @@ package testcases;
 
 import org.testng.SkipException;
 import org.testng.annotations.*;
+import utility.BaseTest;
 
-import java.security.PublicKey;
-
-public class TestCase1 {
+public class TestCase1 extends BaseTest {
 
     @BeforeTest
-    public void CreatingDbConnection(){
+    public void CreatingDbConnection() {
         System.out.println("Creating DB Connection");
     }
 
     @AfterTest
-    public void ClosingDBConnection(){
+    public void ClosingDBConnection() {
         System.out.println("Closing DB Connection");
     }
+
     @BeforeMethod
-    public void LaunchBrowser(){
+    public void LaunchBrowser() {
         System.out.println("Launching Browser");
     }
 
     @AfterMethod
-    public void CloseBrowser(){
+    public void CloseBrowser() {
         System.out.println("Closing Browser");
     }
 
@@ -38,7 +38,7 @@ public class TestCase1 {
 
     @Test(priority = 3)
     public void isSkip() {
-        if(false)
-        throw new SkipException("Skipping the test");
+        if (false)
+            throw new SkipException("Skipping the test");
     }
 }
