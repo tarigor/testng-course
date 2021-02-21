@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="listeners.Listener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="E:/projects/testng-course/src/test/java/testcases">
+        <classes>
+            <class name="testcases.TestCase1">
+                <methods>
+                    <include name="doLogin"/>
+                    <include name="doUserRegistration"/>
+                    <include name="isSkip"/>
+                </methods>
+            </class>
+            <class name="testcases.TestCase2">
+                <methods>
+                    <include name="validateTitles"/>
+                </methods>
+            </class>
+            <class name="testcases.TestCase3">
+                <methods>
+                    <include name="doUserRegistration"/>
+                    <include name="doLogin"/>
+                    <include name="thirdTest"/>
+                    <include name="fourthTest"/>
+                </methods>
+            </class>
+            <class name="testcases.TestCase4">
+                <methods>
+                    <include name="userTest"/>
+                    <include name="loginTest"/>
+                </methods>
+            </class>
+            <class name="testcases.TestCase5">
+                <methods>
+                    <include name="logIn"/>
+                    <include name="userRegistration"/>
+                    <include name="testSkip"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
